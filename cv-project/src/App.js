@@ -34,16 +34,19 @@ function App() {
     }));
   }
 
-  const handlePersonalFormSubmit = (data) => {
-    console.log("Personal form submitted:", data);
+  const handlePersonalFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("Personal form submitted:", formData);
   }
 
-  const handleExperienceFormSubmit = (data) => {
-    console.log("Experience form submitted:", data);
+  const handleExperienceFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("Experience form submitted:", formData);
   }
 
-  const handleEducationFormSubmit = (data) => {
-    console.log("Education form submitted:", data);
+  const handleEducationFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("Education form submitted:", formData);
   }
 
   return (
@@ -70,6 +73,7 @@ function App() {
               onInputChange={handleInputChange}
               onExperienceFormSubmit={handleExperienceFormSubmit}
             />
+            <button>Add</button>
             <div className='title'>
               Education
             </div>
@@ -78,6 +82,7 @@ function App() {
               onInputChange={handleInputChange}
               onEducationFormSubmit={handleEducationFormSubmit}
             />
+            <button>Add</button>
           </div>
           <div className="split-container form-display">
             <ViewForm formData={formData} />

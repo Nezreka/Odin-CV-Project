@@ -39,3 +39,7 @@ header h2{
     border-radius: 5px;
     border: 1px solid transparent;
 }
+
+button{
+    width: fit-content;
+}
